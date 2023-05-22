@@ -482,3 +482,4 @@ typedef Operation = int Function(int x, int y);
 
 int add(int x, int y) => x + y;
 int multiply(int x, int y) => x * y;
+int asdasd(int x, int y) => x;
