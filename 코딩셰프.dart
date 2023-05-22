@@ -470,16 +470,103 @@
 
 //내가 만들어 본것
 
-void main() {
-  Operation operation = add;
-  int result = operation(1, 2);
-  operation = multiply;
-  int result2 = operation(3, 4);
-  print('더하기: $result, 곱하기 : $result2');
-}
+// void main() {
+//   Operation operation = add;
+//   int result = operation(1, 2);
+//   operation = multiply;
+//   int result2 = operation(3, 4);
+//   print('더하기: $result, 곱하기 : $result2');
+// }
 
-typedef Operation = int Function(int x, int y);
+// typedef Operation = int Function(int x, int y);
 
-int add(int x, int y) => x + y;
-int multiply(int x, int y) => x * y;
-int asdasd(int x, int y) => x;
+// int add(int x, int y) => x + y;
+// int multiply(int x, int y) => x * y;
+
+//코딩셰프 담백한 맛 강좌
+//1.Method
+//method를 과일이라고 했을때 믹서기에다가 주스를 만든다 했을때 어떤 과일을 먼져 넣을지 고민해야하듯이
+//metgod도 제일 먼저 어떤 데이터를 처리할지 method타입을 지정해준다
+//그리고 method 내에서 어떤 방법과 기능으로 데이터를 처리할지 지정해준다
+//int addNumber(int data) {
+//
+//}
+//이런 코드를 만들었을때 int는 이 method의 타입이 되는것이 이 안에 있는 데이터는 모두 method 사용이 가능ㅎ다
+//이때 int타입의 method가 만들어 졌기 때문에 return 정수를 무조건 넣어줘야 한다.
+//예시 코드
+
+// void main() {
+//   print(add());
+// }
+
+// int add() {
+//   3 + 4;
+//   return 3 + 4;
+// }
+
+//2.변수 타입들
+// 문자: String 숫자(정수): int 실수: double 참 거짓: Boolean
+//변수 만들어 보기
+// void main() {
+//   String name = 'Mary';
+//   double pi = 3.14;
+//   bool isLogin = false;
+
+//   int sum = add();
+//   print(sum);
+// }
+
+// int add() {
+//   return 3 + 4;
+// }
+
+//3.class
+//class는 객체를 위한 틀 혹은 설계도를 의미한다
+//객체:필요에 따라서 고민하고 정의해서 새롭게 만들어 내야 할 대상을 말한다
+//인스턴스:"클래스를 통해서 만들어진 객체"
+//class코드
+
+// class NewCar {
+//   String carMarket2 = "Ford";
+//   int price2 = 3000;
+//   String color2 = "red";
+//   int whee1Number2 = 4;
+
+//   void autoPark() {
+//     print('자동주차가 가능합니다');
+//   }
+// }
+
+// void main() {
+//   AutoMobile a1 = AutoMobile();
+//   print(a1.carMarket);
+
+//   NewCar n1 = NewCar();
+//   n1.autoPark();
+//}
+
+//4.생성자
+//우리가 생성자를 추가하지 않으면dart가 알아서 기본 생성자를 만드어준다.
+//클래스내에서 생성된 변수에는 반드시 값을 할당할 것
+//즉 Non nullable 변수에는 null값이 할당될 수 없다
+//클래스내에서 생성된 뱐수에는 선언과 동시에 초기화 되어야한다
+//하지만 변수에 null 값이 필요하거나 값이 나중에 할당되어야 하는 경우를 위해서 이를 위한 해결책도 존재함
+
+//생성자 만들기
+
+// class AutoMobile {
+//   String carMarket = "Ford";
+//   int price = 3000;
+//   String color = "red";
+//   int whee1Number = 4;
+
+//   AutoMobile(this.carMarket, this.price, this.color, this.whee1Number);
+// }
+
+// void main() {
+//   AutoMobile a1 = AutoMobile("Tesla", 2000, "White", 4);
+//   print(a1.carMarket);
+
+//   AutoMobile a2 = AutoMobile("Hyundai", 5000, "Genesis", 4);
+//   print(a2.carMarket);
+// }
